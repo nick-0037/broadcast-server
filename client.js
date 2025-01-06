@@ -20,7 +20,8 @@ const connectToServer = (port = 8080) => {
   });
 
   ws.on('message', (message) => {
-    console.log(`Message from server: ${message}`);
+    console.log(`\nMessage from server: ${message}`);
+    rl.prompt();
   })
 
   ws.on('close', () => {
